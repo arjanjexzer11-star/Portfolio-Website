@@ -14,10 +14,7 @@ html {
     --surface-light: #1a0828;
     --text: #f8f0ff;
     --muted: #a99bb5;
-
-    /* NEON PURPLE */
     --accent: #b026ff;
-
     --border: rgba(176, 38, 255, 0.16);
     --card: #14001f;
 }
@@ -28,10 +25,7 @@ body.light-mode {
     --surface-light: #f1e8ff;
     --text: #1a1022;
     --muted: #74657f;
-
-    /* LIGHT NEON PURPLE */
     --accent: #9d00ff;
-
     --border: rgba(157, 0, 255, 0.15);
     --card: #ffffff;
 }
@@ -78,17 +72,6 @@ body.light-mode .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.logo {
-    font-size: 2rem;
-    font-weight: 800;
-    letter-spacing: -2px;
-}
-
-.logo span,
-footer span {
-    color: var(--accent);
 }
 
 .nav-links {
@@ -291,6 +274,7 @@ body.light-mode .profile-card {
     width: 180px;
     height: 180px;
     border-radius: 50%;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -300,10 +284,17 @@ body.light-mode .profile-card {
         #6a00ff
     );
     box-shadow: 0 0 30px rgba(176, 38, 255, 0.35);
-    font-size: 2.5rem;
-    font-weight: 800;
     margin-bottom: 30px;
     color: #ffffff;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
 }
 
 .status {
@@ -353,7 +344,6 @@ body.light-mode .profile-card {
 }
 
 @keyframes float {
-
     0%,
     100% {
         transform: translateY(0);
@@ -527,13 +517,6 @@ body.light-mode .profile-card {
 
 .section-heading h2 span {
     color: var(--muted);
-}
-
-.section-intro {
-    max-width: 350px;
-    color: var(--muted);
-    font-size: 0.95rem;
-    line-height: 1.7;
 }
 
 .empty-projects {
@@ -744,12 +727,6 @@ footer {
     font-size: 0.8rem;
 }
 
-.footer-content h3 {
-    font-size: 1.5rem;
-    color: var(--text);
-    font-weight: 800;
-}
-
 .footer-content p {
     margin-top: 5px;
 }
@@ -872,152 +849,105 @@ footer {
     }
 }
 
-/* =========================
-   PORTFOLIO LOADING INTRO
-========================= */
-
 .loader {
     position: fixed;
     inset: 0;
     z-index: 9999;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: var(--background);
-
     overflow: hidden;
-
     opacity: 1;
     visibility: visible;
-
     transition:
         opacity 0.8s ease,
         visibility 0.8s ease;
 }
 
-/* Loader disappears */
 .loader.hide {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
 
-/* Content */
 .loader-content {
     width: min(450px, 85%);
     text-align: center;
-
     transform: scale(1);
     opacity: 1;
-
     animation: loaderAppear 1s ease forwards;
 }
 
-/* AJB Logo */
 .loader-logo {
     width: 115px;
     height: 115px;
-
     margin: 0 auto 30px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
-
     background: linear-gradient(
         135deg,
         #b026ff,
         #7a00ff
     );
-
     color: #ffffff;
-
     font-size: 2.3rem;
     font-weight: 800;
     letter-spacing: -2px;
-
     box-shadow:
         0 0 0 1px rgba(255, 255, 255, 0.08),
         0 0 25px rgba(176, 38, 255, 0.6),
         0 20px 70px rgba(176, 38, 255, 0.45);
-
-    animation:
-        loaderLogo 2s ease-in-out infinite;
+    animation: loaderLogo 2s ease-in-out infinite;
 }
 
-/* Welcome text */
 .loader h2 {
     margin-bottom: 8px;
-
     color: var(--text);
-
     font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: 700;
     letter-spacing: -0.5px;
 }
 
-/* Name */
 .loader-name {
     margin-bottom: 30px;
-
     color: var(--muted);
-
     font-size: 0.85rem;
     letter-spacing: 1px;
 }
 
-/* Progress container */
 .loader-progress {
     width: 100%;
     height: 4px;
-
     overflow: hidden;
-
     border-radius: 20px;
-
     background: var(--surface-light);
 }
 
-/* Progress bar */
 #loader-progress-bar {
     display: block;
-
     width: 0%;
     height: 100%;
-
     border-radius: 20px;
-
     background: #b026ff;
-
     box-shadow:
         0 0 8px #b026ff,
         0 0 20px rgba(176, 38, 255, 0.8),
         0 0 35px rgba(176, 38, 255, 0.5);
-
     transition: width 0.08s linear;
 }
 
-/* Percentage */
 .loader-percentage {
     margin-top: 15px;
-
     color: #b026ff;
-
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 2px;
-
     text-shadow:
         0 0 8px rgba(176, 38, 255, 0.8);
 }
-
-/* =========================
-   ANIMATIONS
-========================= */
 
 @keyframes loaderAppear {
 
@@ -1030,7 +960,6 @@ footer {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
-
 }
 
 @keyframes loaderLogo {
@@ -1043,20 +972,16 @@ footer {
     50% {
         transform: scale(1.08);
     }
-
 }
 
-/* Home section starts slightly zoomed */
 .hero {
     transform: scale(1.03);
     opacity: 0;
-
     transition:
         transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
         opacity 1s ease;
 }
 
-/* Home section becomes normal */
 .hero.loaded {
     transform: scale(1);
     opacity: 1;
