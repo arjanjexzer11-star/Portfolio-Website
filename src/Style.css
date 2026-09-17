@@ -9,24 +9,24 @@ html {
 }
 
 :root {
-    --background: #08000f;
-    --surface: #100018;
-    --surface-light: #1a0828;
-    --text: #f8f0ff;
-    --muted: #a99bb5;
-    --accent: #b026ff;
-    --border: rgba(176, 38, 255, 0.16);
-    --card: #14001f;
+    --background: #07070d;
+    --surface: #0d0d16;
+    --surface-light: #151522;
+    --text: #f5f3ff;
+    --muted: #9a96a8;
+    --accent: #a855f7;
+    --border: rgba(168, 85, 247, 0.20);
+    --card: #10101a;
 }
 
 body.light-mode {
-    --background: #faf7ff;
+    --background: #f8f7fb;
     --surface: #ffffff;
-    --surface-light: #f1e8ff;
-    --text: #1a1022;
-    --muted: #74657f;
-    --accent: #9d00ff;
-    --border: rgba(157, 0, 255, 0.15);
+    --surface-light: #eee8f7;
+    --text: #17131d;
+    --muted: #6e6878;
+    --accent: #7c3aed;
+    --border: rgba(124, 58, 237, 0.18);
     --card: #ffffff;
 }
 
@@ -985,4 +985,812 @@ footer {
 .hero.loaded {
     transform: scale(1);
     opacity: 1;
+}
+
+
+/* =========================
+   NEON CYBERPUNK ENHANCEMENTS
+   ========================= */
+
+body {
+    background-image:
+        radial-gradient(circle at 15% 20%, rgba(168, 85, 247, 0.08), transparent 28%),
+        radial-gradient(circle at 85% 75%, rgba(124, 58, 237, 0.06), transparent 30%);
+}
+
+body:not(.light-mode)::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.18;
+    background-image:
+        linear-gradient(rgba(168, 85, 247, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(168, 85, 247, 0.035) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+
+.header {
+    background: rgba(7, 7, 13, 0.84);
+    border-bottom-color: rgba(168, 85, 247, 0.22);
+}
+
+body.light-mode .header {
+    background: rgba(248, 247, 251, 0.88);
+}
+
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.7);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);
+}
+
+.theme-toggle:hover {
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.25);
+}
+
+.hero h1 span,
+.hero h2 span {
+    text-shadow: 0 0 24px rgba(168, 85, 247, 0.28);
+}
+
+#typing-text::after {
+    content: "_";
+    display: inline-block;
+    margin-left: 3px;
+    color: var(--accent);
+    animation: terminalCursor 0.8s steps(1) infinite;
+}
+
+@keyframes terminalCursor {
+    50% {
+        opacity: 0;
+    }
+}
+
+.primary-btn {
+    box-shadow: 0 0 0 rgba(168, 85, 247, 0);
+}
+
+.primary-btn:hover {
+    box-shadow:
+        0 0 18px rgba(168, 85, 247, 0.35),
+        0 15px 35px rgba(168, 85, 247, 0.28);
+}
+
+.secondary-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.12);
+}
+
+.profile-card {
+    position: relative;
+    background: linear-gradient(145deg, #151522, #0b0b12);
+    border-color: rgba(168, 85, 247, 0.28);
+    box-shadow:
+        0 0 0 1px rgba(168, 85, 247, 0.04),
+        0 0 35px rgba(168, 85, 247, 0.10),
+        0 30px 80px rgba(0, 0, 0, 0.55);
+}
+
+.profile-card::before {
+    content: "DEV_PROFILE";
+    position: absolute;
+    top: 18px;
+    left: 22px;
+    color: rgba(168, 85, 247, 0.65);
+    font-family: monospace;
+    font-size: 0.62rem;
+    letter-spacing: 1.5px;
+}
+
+.profile-card::after {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border: 1px solid rgba(168, 85, 247, 0.07);
+    border-radius: 18px;
+    pointer-events: none;
+}
+
+.profile-image {
+    background: var(--accent);
+    box-shadow:
+        0 0 0 4px rgba(168, 85, 247, 0.08),
+        0 0 35px rgba(168, 85, 247, 0.42);
+}
+
+.status {
+    background: rgba(168, 85, 247, 0.06);
+    border-color: rgba(168, 85, 247, 0.25);
+}
+
+.floating-card {
+    background: rgba(15, 15, 24, 0.92);
+    border-color: rgba(168, 85, 247, 0.25);
+    box-shadow:
+        0 0 20px rgba(168, 85, 247, 0.10),
+        0 20px 40px rgba(0, 0, 0, 0.42);
+}
+
+.education-card,
+.skill-pill,
+.empty-projects,
+.contact-info-icon,
+.input-group input,
+.input-group textarea {
+    box-shadow: inset 0 0 0 1px rgba(168, 85, 247, 0.025);
+}
+
+.education-card:hover {
+    border-color: rgba(168, 85, 247, 0.55);
+    box-shadow:
+        0 0 24px rgba(168, 85, 247, 0.10),
+        0 20px 45px rgba(0, 0, 0, 0.28);
+}
+
+.education-icon {
+    background: rgba(168, 85, 247, 0.10);
+    border: 1px solid rgba(168, 85, 247, 0.10);
+}
+
+.skill-pill:hover {
+    box-shadow:
+        0 0 18px rgba(168, 85, 247, 0.16),
+        0 10px 25px rgba(168, 85, 247, 0.10);
+}
+
+.empty-projects {
+    position: relative;
+    background:
+        linear-gradient(rgba(168, 85, 247, 0.025), rgba(168, 85, 247, 0.025)),
+        var(--surface);
+    border-color: rgba(168, 85, 247, 0.25);
+}
+
+.empty-projects::before {
+    content: "STATUS: IN DEVELOPMENT";
+    position: absolute;
+    top: 22px;
+    left: 25px;
+    font-family: monospace;
+    font-size: 0.62rem;
+    letter-spacing: 1.5px;
+    color: rgba(168, 85, 247, 0.65);
+}
+
+.empty-icon {
+    box-shadow: 0 0 22px rgba(168, 85, 247, 0.14);
+}
+
+.contact-info-icon {
+    background: rgba(168, 85, 247, 0.05);
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    box-shadow:
+        0 0 0 3px rgba(168, 85, 247, 0.08),
+        0 0 18px rgba(168, 85, 247, 0.08);
+}
+
+.loader {
+    background:
+        radial-gradient(circle at center, rgba(168, 85, 247, 0.08), transparent 35%),
+        var(--background);
+}
+
+.loader::before {
+    content: "SYSTEM ONLINE";
+    position: absolute;
+    top: 28px;
+    left: 32px;
+    font-family: monospace;
+    color: rgba(168, 85, 247, 0.65);
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+}
+
+.loader::after {
+    content: "INITIALIZING PORTFOLIO...";
+    position: absolute;
+    bottom: 28px;
+    right: 32px;
+    font-family: monospace;
+    color: rgba(168, 85, 247, 0.5);
+    font-size: 0.62rem;
+    letter-spacing: 1.5px;
+}
+
+.loader-logo {
+    background: var(--accent);
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.08),
+        0 0 30px rgba(168, 85, 247, 0.65),
+        0 0 70px rgba(168, 85, 247, 0.25),
+        0 20px 70px rgba(168, 85, 247, 0.35);
+}
+
+#loader-progress-bar {
+    background: var(--accent);
+    box-shadow:
+        0 0 8px var(--accent),
+        0 0 20px rgba(168, 85, 247, 0.8),
+        0 0 35px rgba(168, 85, 247, 0.5);
+}
+
+.loader-percentage {
+    color: var(--accent);
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.8);
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 800px) {
+    .nav-links a::after {
+        bottom: -4px;
+    }
+
+    .loader::before {
+        left: 20px;
+    }
+
+    .loader::after {
+        right: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .loader::before,
+    .loader::after {
+        font-size: 0.55rem;
+    }
+}
+
+
+/* =========================================
+   CYBERPUNK GRID / CIRCUIT BACKGROUND
+   ========================================= */
+
+body {
+    position: relative;
+    background-color: var(--background);
+    background-image:
+        linear-gradient(rgba(168, 85, 247, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(168, 85, 247, 0.055) 1px, transparent 1px),
+        radial-gradient(circle at 15% 20%, rgba(168, 85, 247, 0.13), transparent 28%),
+        radial-gradient(circle at 85% 75%, rgba(124, 58, 237, 0.10), transparent 30%);
+    background-size: 55px 55px, 55px 55px, auto, auto;
+    background-attachment: fixed;
+}
+
+/* Faint futuristic scan lines */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0,
+            transparent 3px,
+            rgba(255, 255, 255, 0.012) 4px
+        );
+    opacity: 0.45;
+}
+
+/* Soft neon glow behind the page */
+body::after {
+    content: "";
+    position: fixed;
+    width: 650px;
+    height: 650px;
+    left: -280px;
+    top: 15%;
+    z-index: -1;
+    pointer-events: none;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(168, 85, 247, 0.10) 0%,
+        rgba(168, 85, 247, 0.035) 35%,
+        transparent 70%
+    );
+    filter: blur(20px);
+}
+
+/* Keep sections transparent so the cyber grid stays visible */
+.section,
+.hero {
+    position: relative;
+    background: transparent;
+}
+
+/* Subtle glowing section dividers */
+.education,
+.skills,
+.projects,
+.contact {
+    position: relative;
+}
+
+.education::before,
+.skills::before,
+.projects::before,
+.contact::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    width: 80px;
+    height: 1px;
+    transform: translateX(-50%);
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent);
+}
+
+/* Make cards feel like floating cyber panels */
+.profile-card,
+.education-card,
+.skill-pill,
+.empty-projects,
+.contact-info-icon,
+.input-group input,
+.input-group textarea {
+    backdrop-filter: blur(8px);
+}
+
+/* Light mode: keep the grid subtle */
+body.light-mode {
+    background-image:
+        linear-gradient(rgba(124, 58, 237, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124, 58, 237, 0.035) 1px, transparent 1px),
+        radial-gradient(circle at 15% 20%, rgba(124, 58, 237, 0.06), transparent 28%),
+        radial-gradient(circle at 85% 75%, rgba(168, 85, 247, 0.05), transparent 30%);
+}
+
+
+/* =========================
+   CERTIFICATION DEPTH CAROUSEL
+   ========================= */
+
+.certifications {
+    overflow: hidden;
+}
+
+.certification-heading {
+    margin-bottom: 20px;
+}
+
+.certification-intro {
+    max-width: 620px;
+    margin-top: 14px;
+    color: var(--muted);
+}
+
+.certificate-carousel-wrap {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.depth-carousel {
+    position: relative;
+    width: 100%;
+    height: 540px;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1400px;
+    perspective-origin: 50% 50%;
+    touch-action: pan-y;
+    outline: none;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: grab;
+}
+
+.depth-carousel:active {
+    cursor: grabbing;
+}
+
+.depth-carousel:focus-visible {
+    outline: 2px solid rgba(176, 38, 255, 0.65);
+    outline-offset: 4px;
+    border-radius: 18px;
+}
+
+.depth-carousel__stage {
+    position: absolute;
+    inset: 0;
+    transform-style: preserve-3d;
+}
+
+.depth-carousel__card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 380px;
+    transform-origin: center center;
+    overflow: hidden;
+    border: 1px solid rgba(176, 38, 255, 0.25);
+    border-radius: 18px;
+    background: #0b0d12;
+    box-shadow:
+        0 30px 60px -20px rgba(0, 0, 0, 0.65),
+        0 8px 20px -10px rgba(176, 38, 255, 0.25),
+        0 0 30px rgba(176, 38, 255, 0.08);
+    will-change: transform, opacity, filter;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+.depth-carousel__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+    -webkit-user-drag: none;
+}
+
+.depth-carousel__tint {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+
+.depth-carousel__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3000;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(176, 38, 255, 0.3);
+    border-radius: 999px;
+    background: rgba(18, 20, 26, 0.58);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.depth-carousel__arrow:hover {
+    background: rgba(176, 38, 255, 0.22);
+    border-color: rgba(176, 38, 255, 0.7);
+}
+
+.depth-carousel__arrow:active {
+    transform: translateY(-50%) scale(0.94);
+}
+
+.depth-carousel__arrow--prev {
+    left: 18px;
+}
+
+.depth-carousel__arrow--next {
+    right: 18px;
+}
+
+.depth-carousel__dots {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3000;
+    display: flex;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid rgba(176, 38, 255, 0.2);
+    border-radius: 999px;
+    background: rgba(14, 16, 22, 0.48);
+    backdrop-filter: blur(6px);
+}
+
+.depth-carousel__dot {
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    border: none;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.32);
+    cursor: pointer;
+    transition: width 0.25s ease, background 0.25s ease;
+}
+
+.depth-carousel__dot.is-active {
+    width: 20px;
+    background: #b026ff;
+    box-shadow: 0 0 10px rgba(176, 38, 255, 0.8);
+}
+
+
+
+.certificate-card-link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+.certificate-card-link .depth-carousel__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.certificate-card-badge {
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    padding: 8px 14px;
+    border: 1px solid rgba(176, 38, 255, 0.45);
+    border-radius: 999px;
+    background: rgba(8, 9, 14, 0.78);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 18px rgba(176, 38, 255, 0.18);
+}
+
+.certificate-caption {
+    min-height: 90px;
+    max-width: 680px;
+    margin: -5px auto 0;
+    padding: 18px 24px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--card);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.certificate-caption strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.certificate-caption span {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+body.light-mode .depth-carousel__card {
+    background: #fff;
+    border-color: rgba(124, 58, 237, 0.18);
+    box-shadow:
+        0 30px 60px -25px rgba(55, 30, 90, 0.2),
+        0 10px 25px -12px rgba(124, 58, 237, 0.18);
+}
+
+body.light-mode .depth-carousel__arrow {
+    color: #17131d;
+    background: rgba(255, 255, 255, 0.72);
+    border-color: rgba(124, 58, 237, 0.2);
+}
+
+body.light-mode .depth-carousel__dots {
+    background: rgba(255, 255, 255, 0.72);
+}
+
+body.light-mode .depth-carousel__dot {
+    background: rgba(23, 19, 29, 0.22);
+}
+
+body.light-mode .depth-carousel__dot.is-active {
+    background: #7c3aed;
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.35);
+}
+
+@media (max-width: 700px) {
+    .depth-carousel {
+        height: 470px;
+        min-height: 390px;
+    }
+
+    .depth-carousel__card {
+        width: 250px;
+        height: 320px;
+    }
+
+    .depth-carousel__arrow--prev {
+        left: 5px;
+    }
+
+    .depth-carousel__arrow--next {
+        right: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .depth-carousel {
+        height: 430px;
+    }
+
+    .depth-carousel__card {
+        width: 220px;
+        height: 285px;
+    }
+
+    .depth-carousel__arrow {
+        width: 38px;
+        height: 38px;
+    }
+
+    .certificate-caption {
+        padding: 15px 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .depth-carousel__card {
+        will-change: auto;
+    }
+
+    .depth-carousel__arrow,
+    .depth-carousel__dot {
+        transition: none;
+    }
+}
+
+/* =========================
+   CERTIFICATE IMAGE ZOOM
+   ========================= */
+
+.certificate-image-button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: zoom-in;
+}
+
+.certificate-image-button:focus-visible {
+    outline: 2px solid #b026ff;
+    outline-offset: -3px;
+}
+
+.certificate-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.certificate-lightbox.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.certificate-lightbox__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 2, 7, 0.92);
+    backdrop-filter: blur(10px);
+}
+
+.certificate-lightbox__content {
+    position: relative;
+    z-index: 2;
+    width: min(94vw, 1500px);
+    height: min(92vh, 1000px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    padding: 20px;
+}
+
+.certificate-lightbox__content img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.7), 0 0 45px rgba(176, 38, 255, 0.18);
+}
+
+.certificate-lightbox__close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    z-index: 4;
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(176, 38, 255, 0.5);
+    border-radius: 50%;
+    background: rgba(15, 15, 23, 0.82);
+    color: #fff;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.certificate-lightbox__close:hover {
+    transform: scale(1.08);
+    background: rgba(176, 38, 255, 0.25);
+}
+
+body.certificate-lightbox-open {
+    overflow: hidden;
+}
+
+@media (max-width: 700px) {
+    .certificate-lightbox {
+        padding: 12px;
+    }
+
+    .certificate-lightbox__content {
+        width: 100vw;
+        height: 90vh;
+        padding: 8px;
+    }
+
+    .certificate-lightbox__close {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 25px;
+    }
 }
