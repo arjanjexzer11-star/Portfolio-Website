@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arjan Jexzer Baylon | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="glass-icons.css">
+</head>
+
+<body>
+
+<div class="loader" id="loader">
+
+    <div class="loader-content">
+
+        <div class="loader-logo">
+            <img src="Logo.png" alt="AJB Portfolio Logo">
+        </div>
+
+        <h2>Welcome to my portfolio</h2>
+
+        <p class="loader-name">
+            Arjan Jexzer Baylon
+        </p>
+
+        <div class="loader-progress">
+            <span id="loader-progress-bar"></span>
+        </div>
+
+        <div class="loader-percentage">
+            <span id="loader-percentage">0</span>%
+        </div>
+
+    </div>
+
+</div>
+
+
+<header class="header">
+
+    <nav class="pill-nav-container" aria-label="Primary navigation">
+
+        <div class="pill-nav">
+
+            <a class="pill-logo" href="#home" aria-label="Home">
+                <img src="Logo.png" alt="AJB Portfolio Logo">
+            </a>
+
+            <div class="pill-nav-items desktop-only" id="pillNavItems">
+                <ul class="pill-list" id="navLinks" role="menubar">
+                    <li role="none">
+                        <a href="#education" class="pill" role="menuitem" data-section="education">
+                            <span class="hover-circle" aria-hidden="true"></span>
+                            <span class="label-stack">
+                                <span class="pill-label">Education</span>
+                                <span class="pill-label-hover" aria-hidden="true">Education</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li role="none">
+                        <a href="#skills" class="pill" role="menuitem" data-section="skills">
+                            <span class="hover-circle" aria-hidden="true"></span>
+                            <span class="label-stack">
+                                <span class="pill-label">Skills</span>
+                                <span class="pill-label-hover" aria-hidden="true">Skills</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li role="none">
+                        <a href="#certifications" class="pill" role="menuitem" data-section="certifications">
+                            <span class="hover-circle" aria-hidden="true"></span>
+                            <span class="label-stack">
+                                <span class="pill-label">Certifications</span>
+                                <span class="pill-label-hover" aria-hidden="true">Certifications</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li role="none">
+                        <a href="#projects" class="pill" role="menuitem" data-section="projects">
+                            <span class="hover-circle" aria-hidden="true"></span>
+                            <span class="label-stack">
+                                <span class="pill-label">Projects</span>
+                                <span class="pill-label-hover" aria-hidden="true">Projects</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li role="none">
+                        <a href="#contact" class="pill" role="menuitem" data-section="contact">
+                            <span class="hover-circle" aria-hidden="true"></span>
+                            <span class="label-stack">
+                                <span class="pill-label">Contact</span>
+                                <span class="pill-label-hover" aria-hidden="true">Contact</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="mobile-menu-button mobile-only" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀</button>
+
+        </div>
+
+        <div class="mobile-menu-popover mobile-only" id="mobileNavMenu">
+            <ul class="mobile-menu-list">
+                <li><a href="#education" class="mobile-menu-link">Education</a></li>
+                <li><a href="#skills" class="mobile-menu-link">Skills</a></li>
+                <li><a href="#certifications" class="mobile-menu-link">Certifications</a></li>
+                <li><a href="#projects" class="mobile-menu-link">Projects</a></li>
+                <li><a href="#contact" class="mobile-menu-link">Contact</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                HELLO, I'M
+            </p>
+
+            <h1>
+                <span>Arjan Jexzer</span><br>
+                Baylon.
+            </h1>
+
+            <h2>
+                I am a
+                <span id="typing-text"></span>
+            </h2>
+
+            <p class="hero-description">
+                I create clean, modern, and user-focused digital
+                experiences that turn ideas into meaningful products.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#projects"
+                    class="btn primary-btn">
+                    View Projects
+                </a>
+
+                <a
+                    href="#contact"
+                    class="btn secondary-btn">
+                    Let's Talk
+                </a>
+
+            </div>
+
+            <div class="social-preview">
+            </div>
+
+        </div>
+
+
+        <div class="hero-visual profile-card-stage">
+
+            <div class="pc-card-wrapper" id="profileCard">
+                <div class="pc-behind"></div>
+
+                <div class="pc-card-shell">
+                    <section class="pc-card">
+                        <div class="pc-inside">
+
+                            <div class="pc-shine"></div>
+                            <div class="pc-glare"></div>
+
+                            <div class="pc-content pc-avatar-content">
+
+                                <div class="pc-avatar-frame">
+                                    <img
+                                        class="pc-avatar"
+                                        src="profile.jpg"
+                                        alt="Arjan Jexzer Baylon profile">
+                                </div>
+
+                                <div class="pc-code-badge">&lt;/&gt;</div>
+
+                                <div class="pc-user-info">
+                                    <div class="pc-user-details">
+                                        <div class="pc-mini-avatar">
+                                            <img
+                                                src="Logo.png"
+                                                alt="AJB">
+                                        </div>
+
+                                        <div class="pc-user-text">
+                                            <div class="pc-handle">@arjanjexzer</div>
+                                            <div class="pc-status">
+                                                <span class="pc-status-dot"></span>
+                                                Available for projects
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <a
+                                        class="pc-contact-btn"
+                                        href="#contact">
+                                        Contact Me
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="pc-content pc-details-content">
+                                <div class="pc-details">
+                                    <h3>Arjan Jexzer Baylon</h3>
+                                    <p>Developer</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section
+        class="education section"
+        id="education">
+
+        <div class="education-header">
+
+            <h2>
+                Education
+            </h2>
+
+        </div>
+
+
+        <div class="education-list">
+
+            <article class="education-card">
+
+                <div class="education-icon">
+                    🎓
+                </div>
+
+                <div class="education-content">
+
+                    <h3>
+                        Philippine Christian University
+                    </h3>
+
+                    <span class="education-years">
+                        2024 - Present
+                    </span>
+
+                    <p>
+                        Bachelor of Science in Information Technology
+                    </p>
+
+                    <strong>
+                        GWA: 1.43 (Dean's Lister)
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="education-card">
+
+                <div class="education-icon">
+                    🎓
+                </div>
+
+                <div class="education-content">
+
+                    <h3>
+                        Marymount Academy San Antonio
+                    </h3>
+
+                    <span class="education-years">
+                        2022 - 2024
+                    </span>
+
+                    <p>
+                        ABM Strand
+                    </p>
+
+                    <strong>
+                        With Honors
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="education-card">
+
+                <div class="education-icon">
+                    🎓
+                </div>
+
+                <div class="education-content">
+
+                    <h3>
+                        Masville National High School
+                    </h3>
+
+                    <span class="education-years">
+                        2018 - 2022
+                    </span>
+
+                    <strong>
+                        With Honors
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="education-card">
+
+                <div class="education-icon">
+                    🎓
+                </div>
+
+                <div class="education-content">
+
+                    <h3>
+                        Masville Elementary School
+                    </h3>
+
+                    <span class="education-years">
+                        2012 - 2018
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <section
+        class="skills section"
+        id="skills">
+
+        <div class="skills-header">
+
+            <h2>
+                Skills
+            </h2>
+
+        </div>
+
+
+        <div class="skills-glass-wrap">
+            <div
+                class="icon-btns skills-glass-icons"
+                id="skillsGlassIcons"
+                aria-label="Programming and development skills">
+            </div>
+        </div>
+
+
+        <p class="skills-count">
+            10 skills
+        </p>
+
+    </section>
+
+
+    <section
+        class="certifications section"
+        id="certifications">
+
+        <div class="section-heading certification-heading">
+            <div>
+                <p class="eyebrow">
+                    CERTIFICATIONS
+                </p>
+                <h2>
+                    My <span>certificates.</span>
+                </h2>
+                <p class="certification-intro">
+                    A collection of certificates and training achievements.
+                </p>
+            </div>
+        </div>
+
+        <div class="certificate-carousel-wrap">
+            <div
+                class="depth-carousel"
+                id="certificateCarousel"
+                role="group"
+                aria-roledescription="carousel"
+                aria-label="Certification carousel"
+                tabindex="0">
+                <div class="depth-carousel__stage" id="certificateStage">
+
+                    <article
+                        class="depth-carousel__card"
+                        data-title="Dean's Lister - Silver Awardee • GWA: 1.43"
+                        data-description="2025 - 2026"
+                        data-detail="Philippine Christian University - College of Informatics">
+                        <button
+                            type="button"
+                            class="certificate-image-button"
+                            aria-label="Zoom 2025 - 2026 Dean's Lister Silver Awardee Certificate">
+                            <img
+                                class="depth-carousel__img"
+                                src="certificate-silver-award.jpg"
+                                alt="2025 - 2026 Dean's Lister Silver Awardee Certificate">
+                        </button>
+                    </article>
+
+                    <article
+                        class="depth-carousel__card"
+                        data-title="Responsible Use of AI in Education: It's Influence on Student Growth and Character in a Future-Proof Digital World - March 4, 2026"
+                        data-description="March 4, 2026"
+                        data-detail="E-Certificate"
+                        >
+                        <button
+                            type="button"
+                            class="certificate-image-button"
+                            aria-label="Zoom Responsible Use of AI in Education certificate placeholder">
+                            <img
+                                class="depth-carousel__img"
+                                src="empty-translucent-image.png"
+                                alt="Empty e-certificate placeholder for Responsible Use of AI in Education">
+                        </button>
+                    </article>
+
+                    <article
+                        class="depth-carousel__card"
+                        data-title="Data Privacy Orientation - March 4, 2026"
+                        data-description="March 4, 2026"
+                        data-detail="E-Certificate">
+                        <button
+                            type="button"
+                            class="certificate-image-button"
+                            aria-label="Zoom Data Privacy Orientation certificate placeholder">
+                            <img
+                                class="depth-carousel__img"
+                                src="empty-translucent-image.png"
+                                alt="Empty e-certificate placeholder for Data Privacy Orientation">
+                        </button>
+                    </article>
+
+                    <article
+                        class="depth-carousel__card"
+                        data-title="Junior Philippine Computer Society - PCU Chapter Member 2024 - 2025"
+                        data-description="JPCS - PCU Chapter Member"
+                        data-detail="Philippine Christian University • Academic Year 2024-2025">
+                        <div class="certificate-card-link">
+                            <button
+                                type="button"
+                                class="certificate-image-button"
+                                aria-label="Zoom Junior Philippine Computer Society - PCU Chapter Member 2024 - 2025 Certificate">
+                                <img
+                                    class="depth-carousel__img"
+                                    src="jpcs-pcu-chapter-member-2024-2025.jpg"
+                                    alt="Junior Philippine Computer Society - PCU Chapter Member 2024 - 2025 Certificate">
+                            </button>
+                            <a
+                                class="certificate-card-badge"
+                                href="jpcs-pcu-chapter-member-2024-2025.pdf"
+                                target="_blank"
+                                rel="noopener">
+                                Open PDF
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="depth-carousel__arrow depth-carousel__arrow--prev"
+                    id="certificatePrev"
+                    aria-label="Previous certificate">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+
+                <button
+                    type="button"
+                    class="depth-carousel__arrow depth-carousel__arrow--next"
+                    id="certificateNext"
+                    aria-label="Next certificate">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+
+                <div class="depth-carousel__dots" id="certificateDots" role="tablist" aria-label="Certificates">
+                    <button class="depth-carousel__dot is-active" type="button" aria-label="Certificate 1" aria-selected="true"></button>
+                    <button class="depth-carousel__dot" type="button" aria-label="Certificate 2" aria-selected="false"></button>
+                    <button class="depth-carousel__dot" type="button" aria-label="Certificate 3" aria-selected="false"></button>
+                    <button class="depth-carousel__dot" type="button" aria-label="Certificate 4" aria-selected="false"></button>
+                </div>
+            </div>
+
+            <div class="certificate-caption" id="certificateCaption" aria-live="polite">
+                <strong>2025 - 2026</strong>
+                <span>Dean's Lister - Silver Awardee • GWA: 1.43<br>Philippine Christian University - College of Informatics</span>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="certificate-lightbox" id="certificateLightbox" aria-hidden="true">
+        <button
+            type="button"
+            class="certificate-lightbox__close"
+            id="certificateLightboxClose"
+            aria-label="Close certificate preview">
+            &times;
+        </button>
+        <div class="certificate-lightbox__backdrop" id="certificateLightboxBackdrop"></div>
+        <div class="certificate-lightbox__content" role="dialog" aria-modal="true" aria-label="Certificate preview">
+            <img id="certificateLightboxImage" src="" alt="Certificate full-size preview">
+        </div>
+    </div>
+
+    <section
+        class="projects section"
+        id="projects">
+
+        <div class="section-heading projects-heading">
+
+            <div>
+
+                <p class="eyebrow">
+                    PROJECTS
+                </p>
+
+                <h2>
+                    Selected<br>
+                    <span>work.</span>
+                </h2>
+
+            </div>
+
+            <p class="folder-hint">
+                Click the folder to explore my work.
+            </p>
+
+        </div>
+
+        <div class="folder-project-stage">
+
+            <div
+                class="folder-component"
+                id="projectFolder"
+                tabindex="0"
+                role="button"
+                aria-expanded="false"
+                aria-label="Open project folder">
+
+                <div class="folder-back">
+
+                    <article class="folder-paper folder-paper-1">
+                        <span class="folder-paper-number">01</span>
+                        <span class="folder-paper-title">ASCSMS</span>
+                        <span class="folder-paper-type">School Canteen Stock Management</span>
+                    </article>
+
+                    <article class="folder-paper folder-paper-2">
+                        <span class="folder-paper-number">03</span>
+                        <span class="folder-paper-title">Personal Portfolio</span>
+                        <span class="folder-paper-type">Web Development</span>
+                    </article>
+
+                    <article class="folder-paper folder-paper-3">
+                        <span class="folder-paper-number">02</span>
+                        <span class="folder-paper-title">TCG Looping Showcase</span>
+                        <span class="folder-paper-type">Mini Project</span>
+                    </article>
+
+                    <div class="folder-front"></div>
+                    <div class="folder-front folder-front-right"></div>
+
+                </div>
+
+            </div>
+
+            <div class="folder-project-info" id="folderProjectInfo" aria-live="polite">
+                <span class="folder-info-label">PROJECT FOLDER</span>
+                <h3>My selected work</h3>
+                <p>Open the folder to view the projects inside.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section
+        class="contact section"
+        id="contact">
+
+        <div class="contact-container">
+
+            <div class="contact-heading">
+
+                <p class="eyebrow">
+                    CONTACT
+                </p>
+
+                <h2>
+                    Let's make<br>
+                    something <span>great.</span>
+                </h2>
+
+                <p>
+                    Have an idea, project, or opportunity?
+                    Send me a message and let's talk.
+                </p>
+
+
+                <div class="contact-info">
+
+                    <div class="contact-info-item">
+
+                        <div class="contact-info-icon">
+                            ✉
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Email
+                            </span>
+
+                            <a href="mailto:arjanjexzer11@gmail.com">
+                                arjanjexzer11@gmail.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-info-item">
+
+                        <div class="contact-info-icon">
+                            ☎
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Phone
+                            </span>
+
+                            <a href="tel:09629711532">
+                                0962 971 1532
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-info-item">
+
+                        <div class="contact-info-icon">
+                            ⌖
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Location
+                            </span>
+
+                            <p>
+                                BF Homes Parañaque City<br>
+                                1720 Metro Manila
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-socials">
+
+                    <a
+                        href="https://github.com/arjanjexzer11-star"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        GitHub ↗
+                    </a>
+
+                    <a
+                        href="https://www.facebook.com/arjanjexzerbbaylon"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Facebook ↗
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/secre.uwu/?hl=en"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Instagram ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <form
+                class="contact-form"
+                id="contactForm">
+
+                <div class="input-group">
+
+                    <label for="name">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your name"
+                        required>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="you@example.com"
+                        required>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        rows="5"
+                        placeholder="Tell me about your project..."
+                        required></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn primary-btn">
+                    Send Message →
+                </button>
+
+                <p id="form-message"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <p>
+                Building ideas into digital experiences.
+            </p>
+
+        </div>
+
+        <p>
+            © 2026 Arjan Jexzer Baylon.
+            All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="glass-icons.js"></script>
+<script src="script.js"></script>
+<script src="glow-cursor.js"></script>
+<script>
+/* Chatbase loads only after the portfolio loading screen finishes. */
+(function () {
+    if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+        window.chatbase = (...arguments) => {
+            if (!window.chatbase.q) window.chatbase.q = [];
+            window.chatbase.q.push(arguments);
+        };
+
+        window.chatbase = new Proxy(window.chatbase, {
+            get(target, prop) {
+                if (prop === "q") return target.q;
+                return (...args) => target(prop, ...args);
+            }
+        });
+    }
+
+    let chatbaseLoaded = false;
+
+    function loadChatbase() {
+        if (chatbaseLoaded || document.getElementById("bKT2DDgaoOTGWMgy4_PfU")) return;
+
+        chatbaseLoaded = true;
+
+        const script = document.createElement("script");
+        script.src = "https://www.chatbase.co/embed.min.js";
+        script.id = "bKT2DDgaoOTGWMgy4_PfU";
+        script.domain = "www.chatbase.co";
+        script.async = true;
+        document.body.appendChild(script);
+
+        // Identify the currently signed-in visitor after Chatbase finishes initializing.
+        // The JWT is generated by your server; never put CHATBOT_IDENTITY_SECRET in this file.
+        const identifyWhenReady = () => {
+            if (typeof window.chatbase !== "function") {
+                setTimeout(identifyWhenReady, 100);
+                return;
+            }
+
+            fetch("/api/chatbase-token", {
+                method: "GET",
+                credentials: "include",
+                headers: { "Accept": "application/json" }
+            })
+                .then(response => {
+                    if (!response.ok) throw new Error("Unable to get Chatbase identity token.");
+                    return response.json();
+                })
+                .then(({ token }) => {
+                    if (token) {
+                        window.chatbase("identify", { token });
+                    }
+                })
+                .catch(() => {
+                    // Guests or sites without the token endpoint can still use the Chatbase widget.
+                });
+        };
+
+        // Give the Chatbase embed a moment to initialize before identifying the user.
+        setTimeout(identifyWhenReady, 300);
+    }
+
+    function waitForPortfolioLoader() {
+        const loader = document.getElementById("loader");
+
+        if (!loader) {
+            loadChatbase();
+            return;
+        }
+
+        // script.js adds the "hide" class when the loading animation is done.
+        if (loader.classList.contains("hide")) {
+            loadChatbase();
+            return;
+        }
+
+        requestAnimationFrame(waitForPortfolioLoader);
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", waitForPortfolioLoader, { once: true });
+    } else {
+        waitForPortfolioLoader();
+    }
+})();
+</script>
+
+</body>
+</html>
